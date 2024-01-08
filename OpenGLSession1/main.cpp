@@ -6,7 +6,7 @@ int main(void)
 {
 	GLFWwindow* window; 
 
-	/* Initialize the library */
+	// Initialize GLFW library
 	if (!glfwInit())
 		return -1;
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -41,13 +41,13 @@ int main(void)
 			glfwSetWindowShouldClose(window, true);
 		}
 		//glClearColor(1.0f, 0.4f, 0.4f, 1.0f); //changing color of window background 
-		/* Render here */
+		// clear the screen with the color // or default 
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		/* Swap front and back buffers */
+		// Swap front and back buffers 
 		glfwSwapBuffers(window);
 
-		/* Poll for and process events */
+		// Poll for and process events 
 		glfwPollEvents();
 	}
 
